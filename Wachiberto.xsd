@@ -1,0 +1,168 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Pachucolandia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Ciudadano">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="caracteristicasCiudadano" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="tipoExtremidad" use="optional"/>
+                      <xs:attribute type="xs:byte" name="cantidad" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="ocupacionCiudadano"/>
+              <xs:element name="profesionCiudadano">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="dedicacionActual"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="correoCiudadno">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="login"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="vestimentaCiudadano">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="prenda" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="tipo" use="optional"/>
+                            <xs:attribute type="xs:string" name="color" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="lista">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="producto" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="nombreProducto" use="optional"/>
+                            <xs:attribute type="xs:short" name="precioProducto" use="optional"/>
+                            <xs:attribute type="xs:string" name="fechaCaducidad" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="cita">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="acompañante">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="nombreAcompañante"/>
+                            <xs:attribute type="xs:byte" name="edadCiudadano"/>
+                            <xs:attribute type="xs:string" name="sexoCiudadano"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ubicacion">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="nombre"/>
+                            <xs:attribute type="xs:string" name="direccion"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="proposito">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="cine">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="nombreCine"/>
+                                  <xs:attribute type="xs:string" name="nombrePelicula"/>
+                                  <xs:attribute type="xs:string" name="hora"/>
+                                  <xs:attribute type="xs:string" name="duracionpelicula"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="restaurante">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="menu" maxOccurs="unbounded" minOccurs="0"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="nombre"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="nombreCiudadano"/>
+            <xs:attribute type="xs:byte" name="edadCiudadano"/>
+            <xs:attribute type="xs:string" name="sexoCiudadano"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Empresa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gerente">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="datos">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="nombreGerente"/>
+                            <xs:attribute type="xs:byte" name="edad"/>
+                            <xs:attribute type="xs:string" name="sexo"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="presupuestoEmpresa">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:int" name="valor"/>
+                      <xs:attribute type="xs:string" name="moneda"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="misionEmpresa"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="nombreEmpresa"/>
+            <xs:attribute type="xs:string" name="direccion"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

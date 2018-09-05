@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pachucolandia>
+    <Ciudadano nombreCiudadano="Wachiberto" edadCiudadano="20" sexoCiudadano="Masculino" >
+        <caracteristicasCiudadano tipoExtremidad="superior" cantidad="8"/>
+        <caracteristicasCiudadano tipoExtremidad="inferior" cantidad="4"/>
+        <ocupacionCiudadano> contador Publico </ocupacionCiudadano>
+        <profesionCiudadano dedicacionActual="cargador_de_Estiercol"/>
+        <correoCiudadno login="wachiberticohermoxo.com"/>        
+        <vestimentaCiudadano>
+            <prenda tipo="camisa" color="azul"/>
+            <prenda tipo="pantalon" color="azul"/>
+        </vestimentaCiudadano>           
+        <lista>
+            <producto nombreProducto="WachiLechuda" precioProducto="3000" fechaCaducidad="12/12/2017"/>
+            <producto nombreProducto="WachiRamo" precioProducto="2000" fechaCaducidad="03/08/2015"/>
+            <producto nombreProducto="Yogurtberto" precioProducto="12000" fechaCaducidad="05/09/2014"/>
+        </lista>
+        <cita>
+            <acompañante nombreAcompañante="Wachiberta" edadCiudadano="26" sexoCiudadano="Femenino"/>
+            <ubicacion nombre="Pachucolandia Plaza" direccion="calle 28 N numero 34-45"/>
+            <proposito>
+                <cine nombreCine="PachuFilms" nombrePelicula="El amanecer de los pachuZombies" hora="23:00" duracionpelicula="2:15:00"/>
+                <restaurante nombre="PachuParrilla">
+                   <menu>carne Azada</menu>
+                        <menu>pollo Azado</menu>
+                        <menu>pescado Azado</menu>                        
+                    </restaurante>
+                </proposito>            
+        </cita>
+    </Ciudadano>
+    <Empresa nombreEmpresa="pachucolandia_S.A" direccion="calle 15 N numero 18-23">
+            <gerente> 
+                <datos nombreGerente="Don Pachegerente" edad="45" sexo="Masculino"/>
+            </gerente>
+            <presupuestoEmpresa valor="100000" moneda="pachudolars"/>
+            <misionEmpresa>Recoleccion de resortes</misionEmpresa>            
+    </Empresa>
+</Pachucolandia>
